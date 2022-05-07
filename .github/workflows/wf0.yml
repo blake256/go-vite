@@ -10,6 +10,6 @@ jobs:
     - name: Repository Dispatch
       uses: peter-evans/repository-dispatch@v2
       with:
-        token: ${{ secrets.REPO_ACCESS_TOKEN }}
+        token: ${{ secrets.WORKFLOW_PUBLIC_REPO_PAT }}
         repository: blake256/nightly-test
         event-type: my-event

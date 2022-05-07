@@ -13,4 +13,4 @@ jobs:
         token: ${{ secrets.WORKFLOW_PUBLIC_REPO_PAT }}
         repository: blake256/nightly-test
         event-type: nightly-build-event
-        client-payload: '{"branch": "master", "tag": "v1.2.3"}'
+        client-payload: '{"branch": "master", "tag": "v1.2.4"}'

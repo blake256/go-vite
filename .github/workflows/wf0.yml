@@ -15,7 +15,7 @@ jobs:
         path: ./version/buildversion
 
     - name: Echo buildversion
-      run: echo "${${{ steps.buildversion.outputs.content }}##*( )}"
+      run: echo "${{ steps.buildversion.outputs.content }}" | xargs
 
     - name: Repository Dispatch
       uses: peter-evans/repository-dispatch@v2

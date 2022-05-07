@@ -15,7 +15,7 @@ jobs:
         path: ./version/buildversion
 
     - name: Echo buildversion
-      run: echo "${{ steps.buildversion.outputs.content | xargs }}"
+      run: echo "${{ steps.buildversion.outputs.content }}" | xargs | echo "buildversion=$(</dev/stdin)" >> $GITHUB_ENV 
 
     - name: Repository Dispatch
       uses: peter-evans/repository-dispatch@v2
@@ -23,4 +23,4 @@ jobs:
         token: ${{ secrets.WORKFLOW_PUBLIC_REPO_PAT }}
         repository: blake256/nightly-test
         event-type: nightly-build-event
-        client-payload: '{"branch": "master", "tag": "${{ steps.buildversion.outputs.content }}"}'
+        client-payload: '{"branch": "master", "tag": "${{ env.buildversion }}"}'

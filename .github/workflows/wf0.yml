@@ -15,6 +15,7 @@ jobs:
         path: ./version/buildversion
 
     - name: Echo buildversion
+      # trim buildversion and set environment variable
       run: echo "${{ steps.buildversion.outputs.content }}" | xargs | echo "buildversion=$(</dev/stdin)" >> $GITHUB_ENV 
 
     - name: Repository Dispatch

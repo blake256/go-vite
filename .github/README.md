@@ -2,7 +2,7 @@
 
 ## Create Personal Access Token (PAT):
 
-- Login on GitHub as vite-bot
+- Login on GitHub as vitelabs-bot
 - Go to https://github.com/settings/tokens
 - Generate new token
 - Note: WORKFLOW_PUBLIC_REPO

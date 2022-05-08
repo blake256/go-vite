@@ -1,6 +1,9 @@
-name: wf0
+name: trigger-nightly-build
 
 on:
+  push:
+    branches:    
+      - master
   workflow_dispatch:
 
 jobs:

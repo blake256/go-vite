@@ -2,7 +2,8 @@
 
 ## Create Personal Access Token (PAT):
 
-- Goto https://github.com/settings/tokens
+- Login on GitHub as vite-bot
+- Go to https://github.com/settings/tokens
 - Generate new token
 - Note: WORKFLOW_PUBLIC_REPO
 - Expiration: No expiration
@@ -10,7 +11,7 @@
 
 ## Add repo secret
 
-- Goto Setting -> Secrects -> Actions
+- Go to Settings -> Secrects -> Actions
 - New repository secret
 - Name: WORKFLOW_PUBLIC_REPO_PAT
 - Value: ghp_...
